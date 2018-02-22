@@ -10,6 +10,8 @@ spring:
 
 # Discovery Server Access
 eureka:
+  instance:
+    preferIpAddress: true
   client:
     serviceUrl:
       defaultZone: http://discovery2-ext02d8830.app.ocp.turkcell.tgc/eureka/
