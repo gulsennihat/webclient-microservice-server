@@ -13,7 +13,8 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @author Dinesh.Rajput
  *
  */
-@Controller
+//@Controller
+@RestController
 public class AccountController {
 	
 	@Autowired
@@ -33,5 +34,10 @@ public class AccountController {
 	public String accountDetails(@RequestParam("number") String id, Model model) {
 		model.addAttribute("account", accountRepository.getAccount(id));
 		return "accountDetails";
+	}
+	
+	@RequestMapping("/accountList-rest")
+	public List<Account> accountList(Model model) {
+		return accountRepository.getAllAccounts();
 	}
 }
