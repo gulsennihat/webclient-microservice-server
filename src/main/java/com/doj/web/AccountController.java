@@ -20,21 +20,21 @@ public class AccountController {
 	@Autowired
 	AccountRepository accountRepository;
 	
-	@RequestMapping("/")
-	public String home(){
-		return "index";
-	}
-	@RequestMapping("/accountList")
-	public String accountList(Model model) {
-		model.addAttribute("accounts", accountRepository.getAllAccounts());
-		return "accountList";
-	}
+// 	@RequestMapping("/")
+// 	public String home(){
+// 		return "index";
+// 	}
+// 	@RequestMapping("/accountList")
+// 	public String accountList(Model model) {
+// 		model.addAttribute("accounts", accountRepository.getAllAccounts());
+// 		return "accountList";
+// 	}
 	
-	@RequestMapping("/accountDetails")
-	public String accountDetails(@RequestParam("number") String id, Model model) {
-		model.addAttribute("account", accountRepository.getAccount(id));
-		return "accountDetails";
-	}
+// 	@RequestMapping("/accountDetails")
+// 	public String accountDetails(@RequestParam("number") String id, Model model) {
+// 		model.addAttribute("account", accountRepository.getAccount(id));
+// 		return "accountDetails";
+// 	}
 	
 	@RequestMapping("/accountList-rest")
 	public List<Account> accountList(Model model) {
