@@ -8,7 +8,7 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://discovery2-myproject.192.168.64.2.nip.io/eureka/
+      defaultZone: http://discovery2-bono.193b.starter-ca-central-1.openshiftapps.com/eureka/
 
 # Disable Spring Boot's "Whitelabel" default error page, so we can use our own
 error:
